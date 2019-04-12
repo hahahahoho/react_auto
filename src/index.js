@@ -3,12 +3,18 @@ import ReactDOM from 'react-dom';
 import Root from './Root';
 import * as serviceWorker from './serviceWorker';
 
-import modules from './modules/list';
-import {createStore} from 'redux';
+import modules from './modules';
+//미들웨어를 적용해보자
+import listMiddleware from './lib/listMiddleware';
+import penderMiddleware from 'redux-pender';
+import ReduxThunk from 'redux-thunk';
+
+import {createStore, applyMiddleware} from 'redux';
 import {Provider} from 'react-redux';
 
 
-const store = createStore(modules);
+
+const store = createStore(modules, applyMiddleware(ReduxThunk));
 ReactDOM.render(
     <Provider store={store}>
         <Root />
