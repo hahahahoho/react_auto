@@ -1,19 +1,24 @@
 import {combineReducers} from 'redux';
-import boardList from './boardList';
-import boardView from './boardView'
+import list from './list';
+import view from './view';
+import update from './update';
+
 import login from './login';
 import join from './join';
 import auth_phone from './auth_phone';
 import auth_email from './auth_email';
-import {penderReducer} from 'redux-pender';
+
+
+//import {penderReducer} from 'redux-pender';
 
 export default combineReducers({
-    boardList,
-    boardView,
+    list,
+    view,
+    update,
     login,
     join,
     auth_phone,
     auth_email,
-    pender : penderReducer
+    // pender : penderReducer
 })
 

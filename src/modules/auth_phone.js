@@ -15,7 +15,7 @@ export const change = createAction(CHANGE);
 
 export const checkPhoneAsync = (userInfo, history) => dispatch =>{
     dispatch(getPostPending());
-    return axios.post('http://192.168.0.40:3000/auth/phone', userInfo).then(res =>{
+    return axios.post('http://192.168.0.81:3000/auth/phone', userInfo).then(res =>{
         dispatch(getPostSuccess(res));
         if(res.data !== 'fail'){
             let val = String(res.data);

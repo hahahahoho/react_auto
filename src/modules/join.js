@@ -14,7 +14,7 @@ export const getPostFailure = createAction(GET_POST_FAILURE);
 export const change = createAction(CHANGE);
 export const joinAsync = (userInfo, history) => dispatch =>{
     dispatch(getPostPending());
-    return axios.post('http://192.168.0.40:3000/users/', userInfo).then(res =>{
+    return axios.post('http://192.168.0.81:3000/users/', userInfo).then(res =>{
         dispatch(getPostSuccess(res));
         console.log(res.data)
         if(res.data === 'success'){

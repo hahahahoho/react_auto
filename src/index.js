@@ -6,9 +6,10 @@ import * as serviceWorker from './serviceWorker';
 import modules from './modules';
 //미들웨어를 적용해보자
 import listMiddleware from './lib/listMiddleware';
-import penderMiddleware from 'redux-pender';
-import ReduxThunk from 'redux-thunk';
 
+//현재적용중 미들웨어
+import ReduxThunk from 'redux-thunk';
+//리덕스 생성 및 미들웨어 적용
 import {createStore, applyMiddleware} from 'redux';
 import {Provider} from 'react-redux';
 

@@ -17,7 +17,7 @@ export const getPostFailure = createAction(GET_POST_FAILURE);
 
 export const checkEmailAsync = (userInfo, history) => dispatch =>{
     dispatch(getPostPending());
-    return axios.post('http://192.168.0.40:3000/auth/email', userInfo).then(res =>{
+    return axios.post('http://192.168.0.81:3000/auth/email', userInfo).then(res =>{
         dispatch(getPostSuccess(res));
         if(res.data !== 'fail'){
             let val = String(res.data);

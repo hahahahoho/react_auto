@@ -1,6 +1,6 @@
 import React from 'react';
 import ListBox from './Box/ListBox'
-const MainPage = ({history}) => {
+const SolutionListPage = ({history}) => {
     let solutionList = {
         tbName : 'notices_ela', //*필수
         // pageSize : 15,
@@ -24,16 +24,16 @@ const MainPage = ({history}) => {
         active_view_field : 'title',
         search_view_field : 'id',
         //페이징처리 활성화
-        active_paginator : true,
+        //active_paginator : true, //제외, 추후 무한스크롤 적용기능 추가
         //검색바 활성화
         active_searchBar : true,
     }
+
     return (
-        <div>    
+        <div>
             <ListBox history={history} option={solutionList}></ListBox>
-            메인페이지
         </div>
     );
 };
 
-export default MainPage;
+export default SolutionListPage;
